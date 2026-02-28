@@ -1,0 +1,1046 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Countdown from "../components/Countdown.svelte";
+import Navbar from "../components/Navbar.astro";
+import Navbarbottom from "../components/Navbar.svelte";
+
+import Tracks from "../components/Tracks.astro";
+import Why from "../components/Why.astro";
+import Whyget from "../components/Whyget.astro";
+
+
+import { categories } from "../components/categories.js";
+
+
+---
+
+<Layout  title="LEAP | KERALA STARTUP MISSION">
+
+
+<Navbarbottom client:load></Navbarbottom>
+
+
+<!-- Popup Container -->
+<div id="promoPopup" class="fixed bottom-6 right-6 z-[100]">
+  
+  <div class="relative   overflow-hidden w-80 p-2">
+    
+    <!-- Close Button -->
+    <button 
+      onclick="closePopup()" 
+      class="absolute top-0 left-0 bg-black text-white text-xs w-6 h-6 rounded-full flex items-center justify-center hover:bg-gray-700">
+      ✕
+    </button>
+
+    <!-- Clickable Image -->
+    <a href="https://agrinextsummit.startupmission.in/" target="_blank">
+      <img src="/img/244774.jpeg" alt="Promo" class="w-full h-auto shadow-xl rounded-2xl">
+    </a>
+
+  </div>
+</div>
+
+<script is:inline>
+  function closePopup() {
+    document.getElementById("promoPopup").style.display = "none";
+  }
+</script>
+
+
+
+<!--==================================================-->
+<!-- Start Echofy Hero Area -->
+<!--==================================================-->
+<div class="hero-slides owl-carousel">	
+	<div class="hero-area d-flex align-items-center">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<div class="hero-content">
+						<h4 class="sub-title" data-animation="fadeInUp" data-delay="100ms">Next Gen Solution for Farmers</h4>
+						<h1 class="main-title" data-animation="fadeInUp" data-delay="400ms">AgriNext</h1>
+						<h3 class="md:text-xl text-lg uppercase text-white pt-3">
+							Kerala Climate Resilient Agri Value Chain Modernization Project
+						</h3>
+						<p class="hero-desc" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">
+							To make Kerala a model for sustainable, tech-enabled agriculture  where farmers , startups ,women and youth benefit from innovation, markets, and inclusive growth.
+						</p>
+					</div>
+					<div class="echofy-button" data-animation="fadeInUp" data-delay="1000ms">
+						<a href="#about" class="page-scroll">Read More<img src="assets/images/home1/button-shape.png" alt=""></a>
+						<img class="two" src="assets/images/home1/button-shape-2.png" alt="">
+					</div>		
+				
+				</div>
+			</div>
+		</div>
+		<div class="hero-social-icon" data-animation="fadeInLeft" data-delay="1000ms">
+			<ul>
+	            <li><a  target="_blank" href="https://www.facebook.com/keralastartupmission"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a  target="_blank" href="https://x.com/startup_mission" target="_blank"><i class="fab fa-twitter"></i></a></li>
+				<li><a  target="_blank" href="https://www.linkedin.com/company/kerala-startup-mission/" target="_blank"  ><i class="fab fa-linkedin-in"></i></a></li>
+				<li class="text">Follow Us</li>
+			</ul>
+		</div>
+	</div>	
+	</div>		
+</div>
+
+<div class="hidden">
+	<div class="counter-area home-four md:mb-44 mb-20">
+		<div class="container">
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-2 gap-2 row add-bg align-items-center">
+				<div class="">
+					<div class="counter-thumb">
+						<img src="/img/selling-shep-1 (1).png" class="w-3/4" alt="">
+					</div>
+				</div>
+				<div class="">
+					<div class="single-conter-box text-white">
+						<div class="flex gap-4">
+							<i class="text-2xl md:text-3xl fas fa-trophy"></i>
+							<span class="md:text-lg text-xs ">Secure 25lakhs as grant money</span>
+						</div>
+					</div>
+				</div>			
+				<div class="">
+					<div class="single-conter-box text-white">
+						<div class="flex gap-4">
+							<i class="text-2xl md:text-3xl fas fa-award"></i>
+							<span class="md:text-lg text-xs ">Empowering 150+ Startups to Grow and Thrive</span>
+						</div>
+					</div>
+				</div>			
+				<div class="">
+					<div class="single-conter-box text-white">
+						<div class="flex gap-4">
+							<i class="text-2xl md:text-3xl fas fa-leaf"></i>
+							<span class="md:text-lg text-xs ">Reaching 40,000 Farmers with Impact</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="echofy-text-section"   data-cues="zoomIn">
+	<div class="inner-container">
+		<div class="marquee">
+			<div class="marquee-block"> 
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><i class="text-2xl md:text-3x pr-4 fas fa-trophy"></i>Secure 25lakhs as grant money</span></h6>
+				</div>
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><i class="text-2xl md:text-3x pr-4 fas fa-award"></i>Empowering 150+ Startups to Grow and Thrive</span></h6>
+				</div>
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><i class="text-2xl md:text-3x pr-4 fas fa-leaf"></i>Reaching 40,000 Farmers with Impact</span></h6>
+				</div>
+			</div>
+			<div class="marquee-block"> 
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><i class="text-2xl md:text-3x pr-4 fas fa-trophy"></i>Secure 25lakhs as grant money</span></h6>
+				</div>
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><i class="text-2xl md:text-3x pr-4 fas fa-award"></i>Empowering 150+ Startups to Grow and Thrive</span></h6>
+				</div>
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><i class="text-2xl md:text-3x pr-4 fas fa-leaf"></i>Reaching 40,000 Farmers with Impact</span></h6>
+				</div>
+			</div>
+	  	</div>
+	</div>
+</section>
+
+<!-- <div class="hero-slides owl-carousel">	
+	<div class="hero-area d-flex align-items-center">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<div class="hero-content position-relative">
+						<h4 class="sub-title" data-animation="fadeInUp" data-delay="100ms">
+							Next Gen Solution for Farmers
+						</h4>
+						<h1 class="main-title" data-animation="fadeInUp" data-delay="400ms">
+							AgriNext
+						</h1>
+						<h3 class="md:text-xl text-lg uppercase text-white pt-3">
+							Kerala Climate Resilient Agri Value Chain Modernization Project
+						</h3>
+						<p class="hero-desc" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">
+							To make Kerala a model for sustainable, tech-enabled agriculture where farmers, startups, women and youth benefit from innovation, markets, and inclusive growth.
+						</p>
+
+						<div class="echofy-button" data-animation="fadeInUp" data-delay="1000ms">
+							<a target="_blank" href="#about">Read More
+								<img src="assets/images/home1/button-shape.png" alt="">
+							</a>
+							<img class="two" src="assets/images/home1/button-shape-2.png" alt="">
+						</div>	
+
+						<div class="hero-floating-boxes">
+							<div class="float-box box1" data-aos="fade-left" data-aos-delay="200">
+								<i class="fas fa-trophy"></i>
+								<span class="md:text-lg text-xs ">Secure 25lakhs as grant money</span>
+							</div>
+							<div class="float-box box2" data-aos="fade-left" data-aos-delay="400">
+								<i class="fas fa-award"></i>
+								<span class="md:text-lg text-xs ">Empowering 150+ Startups to Grow and Thrive</span>
+							</div>
+							<div class="float-box box3" data-aos="fade-left" data-aos-delay="600">
+								<i class="fas fa-leaf"></i>
+								<span class="md:text-lg text-xs ">Reaching 40,000 Farmers with Impact</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hero-social-icon" data-animation="fadeInLeft" data-delay="1000ms">
+			<ul>
+	            <li><a target="_blank" href="https://www.facebook.com/keralastartupmission"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a target="_blank" href="https://x.com/startup_mission"><i class="fab fa-twitter"></i></a></li>
+				<li><a target="_blank" href="https://www.linkedin.com/company/kerala-startup-mission/"><i class="fab fa-linkedin-in"></i></a></li>
+				<li class="text">Follow Us</li>
+			</ul>
+		</div>
+	</div>	
+</div>
+
+<style>
+.hero-floating-boxes {
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	z-index: 5;
+}
+
+.float-box {
+	background: #ffffff;
+	color: #111;
+	border-radius: 50px;
+	padding: 12px 20px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	font-weight: 600;
+	width: max-content;
+	transition: all 0.3s ease;
+}
+
+.float-box i {
+	color: #09753f; 
+	font-size: 18px;
+}
+
+
+.box1 {
+	transform: translateY(-80px);
+}
+.box2 {
+	transform: translateY(0);
+	margin-left: 30px;
+}
+.box3 {
+	transform: translateY(80px);
+	margin-left: -60px;
+}
+
+@media (max-width: 992px) {
+	.hero-floating-boxes {
+		position: static;
+		transform: none;
+		align-items: center;
+		margin-top: 2rem;
+	}
+	.float-box {
+		margin: 0 !important;
+		transform: none;
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+	}
+}
+</style> -->
+
+
+<!--==================================================-->
+<!-- End Echofy Hero Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Start Echofy Text Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- End Echofy Text Area -->
+<!--==================================================-->
+
+
+
+<!--==================================================-->
+<!-- Strat Echofy About Area -->
+<!--==================================================-->
+<div class="about-area" id="about">
+	<div class="container">
+		<div class="flex md:flex-row flex-col align-items-center">
+			<div class="md:w-1/3 w-full">
+				<div class="about-thumb">
+					<img src="/delete/video-1-1.jpg" class="rounded-xl" alt="">
+				</div>
+			</div>
+			<div class="md:w-2/3 w-full">
+				<div class="about-right">
+					<div class="section-title left mb-6">
+						<h1>AgriNext</h1>
+					</div>
+					<div class="text-black">
+						<p class="text-black">
+							The Kerala Climate Resilient Agri Value Chain Modernization Project is a flagship initiative by the Government of Kerala in collaboration with the World Bank, focused on transforming agriculture and rural livelihoods. It aims to create a vibrant, technology-driven ecosystem where farmers, startups, and agri-entrepreneurs thrive together.
+						</p>
+						<p class="pt-4 text-black">
+							At its heart, Kerala Climate Resilient Agri Value Chain Modernization Project promotes innovation, entrepreneurship, sustainability, and community development—bringing cutting-edge solutions to the grassroots.
+						</p>
+					</div>
+					<div class="sm:flex hidden pt-6">
+						<div class="grid sm:grid-cols-3 gap-4 ">
+							<div>
+								<img src="/img/1a.png" class="rounded-xl">
+							</div>
+							<div>
+								<img src="/img/2a.png" class="rounded-xl">
+							</div>
+							
+							<div>
+								<img src="/img/32.png" class="rounded-xl">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--==================================================-->
+<!-- End Echofy About Area -->
+<!--==================================================-->
+
+<div class="process-area-two" id="Objectives">
+	<div class=" px-5">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="section-title center">
+					<h1>Objectives</h1>
+				</div>
+			</div>
+		</div>
+		<div class="grid md:grid-cols-3 lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-4">
+			<div class="">
+				<div class="single-process-box-two style-one">
+					<div class="process-icon-thumb-two">
+						<img src="assets/images/home1/process-two-icon1.png" class="p-8" alt="">
+					</div>
+				</div>
+					<div class="text-center process-two-content">
+						<p class="text-black pt-2 text-lg">
+							Modernize Kerala’s agricultural practices
+	                    </p>
+					</div>
+				<!-- </div> -->
+			</div>			
+			<div class="">
+				<div class="single-process-box-two">
+					<div class="process-icon-thumb-two">
+						<img src="/img/farmers.png" class="p-8" alt="">
+					</div>
+				</div>
+				
+					<div class="text-center process-two-content">
+						
+						<p class="text-black pt-2 text-lg">
+							Promote farmer-producer collectives and cooperatives.
+	                    </p>
+					</div>
+				<!-- </div> -->
+			</div>			
+			<div class="">
+				<div class="single-process-box-two ">
+					<div class="process-icon-thumb-two">
+						<img src="/img/startup.png" class="p-8" alt="">
+					</div>
+				</div>
+				
+					<div class="text-center process-two-content">
+						<p class="text-black pt-2 text-lg">
+							Support startups in solving real-world agri challenges.
+	                    </p>
+					</div>
+				<!-- </div> -->
+			</div>			
+			<div class="">
+				<div class="single-process-box-two">
+					<div class="process-icon-thumb-two">
+						<img src="assets/images/home1/process-two-icon2.png" class="p-8" alt="">
+					</div>
+				</div>
+				
+					<div class="text-center process-two-content">
+						<p class="text-black pt-2 text-lg">
+							Improve productivity, sustainability, and market access.
+	                    </p>
+					</div>
+				<!-- </div> -->
+			</div>			
+			<div class="">
+				<div class="single-process-box-two style-three">
+					<div class="process-icon-thumb-two">
+						<img src="assets/images/home1/process-two-icon3.png" class="p-8" alt="">
+					</div>
+				</div>
+				
+					<div class="text-center process-two-content">
+						<p class="text-black pt-2 text-lg">
+							Enable women and youth to lead agri-entrepreneurship.
+	                    </p>
+					</div>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="service-area pb-0 hidden">
+	<div class="container">
+		<div class="pb-10">
+			<div class="w-full">
+				<div class="section-title left ">
+					<h1>Startup <span class="text-green-800">Challenges</span></h1>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col item-center justify-center mx-auto  pt-4">
+	<div id="problemstatements" class=" flex flex-col item-center justify-center">
+
+		<div class="">
+			{categories.map(cat => (
+			<a
+				href={`/challenges/${cat.id}`}
+				class="group flex items-center justify-between gap-6 md:px-10 px-3 py-6 hover:bg-[#f6f6ee] transition border-b group hover:shadow-xl  duration-700 overflow-hidden"
+			>
+				<div class="flex-1">
+				{/* <div class="text-sm text-slate-500 mb-1">
+					{cat.code}
+				</div> */}
+
+				<h2 class="text-lg font-semibold text-slate-900 group-hover:text-[#03543f] ">
+					{cat.name}
+				</h2>
+				</div>
+
+				<div class="hidden md:block text-sm text-slate-600">
+				
+				{cat.problem_statements.length} Challenges
+				</div>
+
+				<div class="hidden md:block text-sm text-slate-600">
+					{cat.problem_statements.length > 1 && (
+						<>
+						{cat.problem_statements.length} Challenges
+						</>
+					)}
+				</div>
+
+
+				<div class="flex items-center gap-2 text-indigo-700 font-medium">
+				View Details
+				<span class="text-lg leading-none">→</span>
+				</div>
+			</a>
+			))}
+		</div>
+
+	</div>
+</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<div class="service-area home-two inner pt-0 pb-24" id="Challenges">
+  <div class="container">
+
+    <div class="pb-10">
+      <div class="section-title left">
+        <h1>Startup <span class="text-green-800">Challenges</span></h1>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+      {categories.map(cat => (
+        <div key={cat.id} class="group">
+          <div class="single-service-box h-full bg-white rounded-md border border-white duration-300  group-hover:border-green-700 group-hover:border">
+            
+            <div class=" p-4">
+				<a  href={`/challenges/${cat.id}`} target="_blank">
+					<img src={cat.image} class="rounded-md" alt={cat.name}/>
+				</a>
+            </div>
+
+            <div class="bg-white  px-4 pb-4 h-full">
+              <a href={`/challenges/${cat.id}`} target="_blank" class="text-2xl font-bold text-black">
+                {cat.name}
+              </a>
+
+              <div class="  flex items-center justify-center  pt-4 pb-4 ">
+				<div class="absolute bottom-5 w-full border-t">
+					<div class="justify-between  w-full  px-8 pt-2  flex  service-button ">
+						<div class="item-center flex justify-center">
+							<a
+								href={`/challenges/${cat.id}`}
+								target="_blank"
+								class="group-hover:text-[#49AF45] font-semibold"
+							>
+								{cat.problem_statements.length}{" "}
+								{cat.problem_statements.length > 1 ? "Challenges" : "Challenge"}
+							</a>
+						</div>
+
+						<div><a href={`/challenges/${cat.id}`} target="_blank"><i class="bi bi-arrow-right-short group-hover:bg-[#49AF45] group-hover:text-white"></i></a></div>
+					</div>
+				</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--==================================================-->
+<!-- Strat Echofy Service Area -->
+<!--==================================================-->
+<div class="service-area">
+	<div class="container">
+		<div class="pb-10">
+			<div class="w-full">
+				<div class="section-title left ">
+					<h1>Key Components</h1>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="grid md:grid-cols-3 lg:grid-cols-3 gap-4 grid-cols-1">
+				<div class=" group">
+					<div class="single-service-box h-full">
+					<div class="service-content h-full">
+						<div class="service-content-icon">
+						<img src="assets/images/home1/service-icon2.png" alt="">
+						</div>
+						<h4>Farmer Collectives & Value Chains</h4>
+						<p class=" group-hover:text-black duration-300">Strengthening Farmer Producer Organizations (FPOs) and cooperatives to enhance aggregation, processing, and value addition across crops.</p>
+					</div>
+					
+					<div class="service-box-shape">
+						<img src="assets/images/home1/service-box-shape.png" alt="">
+					</div>
+					</div>
+				</div>
+
+				<div class=" group">
+					<div class="single-service-box h-full">
+					<div class="service-content h-full">
+						<div class="service-content-icon">
+						<img src="assets/images/home1/service-icon2.png" alt="">
+						</div>
+						<h4>Sustainable Farming & Technology</h4>
+						<p class=" group-hover:text-black duration-300">Introducing climate-resilient and sustainable agricultural practices, backed by technology adoption among small and marginal farmers.</p>
+					</div>
+				
+					<div class="service-box-shape">
+						<img src="assets/images/home1/service-box-shape.png" alt="">
+					</div>
+					</div>
+				</div>
+
+				<div class=" group">
+					<div class="single-service-box h-full">
+					<div class="service-content h-full">
+						<div class="service-content-icon">
+						<img src="assets/images/home1/service-icon2.png" alt="">
+						</div>
+						<h4>Startup Innovation for Agriculture</h4>
+						<p class=" group-hover:text-black duration-300">
+							Led by Kerala Startup Mission, this subcomponent supports 150 agri-tech startups with funding and incubation, helping commercialize their products and bring them into the hands of 40,000+ farmers and agri-enterprises.
+						</p>
+					</div>
+					
+					<div class="service-box-shape">
+						<img src="assets/images/home1/service-box-shape.png" alt="">
+					</div>
+					</div>
+				</div>
+
+				<div class=" group">
+					<div class="single-service-box h-full">
+					<div class="service-content h-full">
+						<div class="service-content-icon">
+						<img src="assets/images/home1/service-icon2.png" alt="">
+						</div>
+						<h4>Women & Youth Empowerment</h4>
+						<p class=" group-hover:text-black duration-300">
+							Special focus on empowering women entrepreneurs and engaging youth in agri-enterprise and rural innovation.
+						</p>
+					</div>
+					
+					<div class="service-box-shape">
+						<img src="assets/images/home1/service-box-shape.png" alt="">
+					</div>
+					</div>
+				</div>
+
+				<div class=" group">
+					<div class="single-service-box h-full">
+					<div class="service-content h-full">
+						<div class="service-content-icon">
+						<img src="assets/images/home1/service-icon2.png" alt="">
+						</div>
+						<h4>Market Linkages & Digital Platforms</h4>
+						<p class=" group-hover:text-black duration-300">Connecting farmers and producers directly with markets, buyers, and logistics through digital tools and platforms.</p>
+					</div>
+					
+					<div class="service-box-shape">
+						<img src="assets/images/home1/service-box-shape.png" alt="">
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--==================================================-->
+<!-- End Echofy Service Area -->
+
+<section class="echofy-text-section"   data-cues="zoomIn">
+	<div class="inner-container">
+		<div class="marquee">
+			<div class="marquee-block"> 
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><img src="assets/images/home1/text-shape.png" alt="">Empowering Farmers</span></h6>
+				</div>
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><img src="assets/images/home1/text-shape.png" alt="">Enabling Startups</span></h6>
+				</div>
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><img src="assets/images/home1/text-shape.png" alt="">Strengthening Rural Economies</span></h6>
+				</div>
+			</div>
+			<div class="marquee-block"> 
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><img src="assets/images/home1/text-shape.png" alt="">Empowering Farmers</span></h6>
+				</div>
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><img src="assets/images/home1/text-shape.png" alt="">Enabling Startups</span></h6>
+				</div>
+				<!-- content-box -->
+				<div class="content-box">
+					<h6 class="title"><span><img src="assets/images/home1/text-shape.png" alt="">Strengthening Rural Economies</span></h6>
+				</div>
+			</div>
+	  	</div>
+	</div>
+</section>
+
+
+
+<!--==================================================-->
+<div class="testimonial-area home-two md:py-24">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6"></div>
+			<div class="col-lg-6">
+				<div class="section-title left">
+					<h1 class="pb-10">Why AgriNext Stands Out</h1>
+				</div>
+				<div>
+					<div class="flex flex-col gap-5 mb-10">
+						<Why title="Grassroots-Centered Design" />
+						<Why title="Startup–Farmer Collaboration" />
+						<Why title="Climate-Smart & Inclusive"  />
+						<Why title="Backed by International Partnerships"/>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="testi-shape">
+			<img src="assets/images/home2/testi-shape.png" alt="">
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div class="blog-area home-six md:py-24" id="Get_Involved">
+	<div class="container">
+		<div class="row">
+            <div class="col-md-12 text-center">
+				<div class="section-title center">
+					<h4><img src="assets/images/home6/section-title-shape.png" alt=""><img class="images-2" src="assets/images/home6/section-title-shape.png" alt=""></h4>
+					<h1>Get Involved</h1>
+				</div>
+			</div>
+		</div>
+		<div class="grid md:grid-cols-3 gap-4 grid-cols-1">
+  
+			<div class="">
+				<div class="single-blog-box flex flex-col h-full">
+				<div class="blog-thumb">
+					<img src="/img/gg1.svg" alt="">
+				</div>
+				<div class="blog-content flex-1 flex flex-col ">
+					<span class="uppercase text-green-500 pb-3">For Startups</span>
+					<div>
+						<div class="flex flex-col gap-1">
+							<Whyget title="Opportunity to pilot and refine agri-tech solutions with farmers and FPOs."/>
+							<Whyget title="Get funding worth Rs.25 lakhs"/>
+							<!-- <Whyget title="Exposure to farmers to test the product" /> -->
+							<Whyget title="Opportunity to test and iterate your product in actual use case scenario" />
+						</div>
+					</div>
+					<div class="blog-button mt-4">
+						<a  target="_blank" href="https://forms.zohopublic.com/keralastartupmission/form/KERAProjectStartup/formperma/Y3wuDXL42dRQ6aDws_CIhuA-izY3E3XPGYuhlNZ3C-M" target="_blank">Apply<i class="bi bi-arrow-right-short"></i></a>
+					</div>
+				</div>
+				<div class="meta-blog mt-2">
+					<span>For Startups</span>
+				</div>
+				</div>
+			</div>
+			
+			<div class="">
+				<div class="single-blog-box flex flex-col h-full">
+				<div class="blog-thumb">
+					<img src="/img/ggg1.svg" alt="">
+				</div>
+					<div class="blog-content flex-1 flex flex-col ">
+					<span class="uppercase text-green-500 pb-3">For farmers & FPOs</span>
+					<div>
+						<div class="flex flex-col gap-1">
+							<Whyget title="Opportunity to adopt tech solutions"/>
+							<Whyget title="Scouting problem statements to identify solutions" />
+						</div>
+					</div>
+					<div class="blog-button mt-4">
+						<a  target="_blank" href="https://forms.zohopublic.com/keralastartupmission/form/KERAProjectFarmersFPOs/formperma/XUnpANV4PsRueYXAfzMZO5WvlkbKw8SX-9gMW5-DbAM" target="_blank">Join agrinext collectives <i class="bi bi-arrow-right-short"></i></a>
+					</div>
+				</div>
+				<div class="meta-blog mt-2">
+					<span>For farmers & FPOs</span>
+				</div>
+				</div>
+			</div>
+			
+			<div class="">
+				<div class="single-blog-box flex flex-col h-full">
+				<div class="blog-thumb">
+					<img src="/img/ggg3.svg" alt="">
+				</div>
+					<div class="blog-content flex-1 flex flex-col ">
+					<span class="uppercase text-green-500 pb-3">For partners & Institutions</span>
+					<div>
+						<div class="flex flex-col gap-1">
+							<Whyget title="Handhold startups/farmers & FPOs to scale the operations and products"/>
+							<Whyget title="Collaboration in research for the development of new projects" />
+							<Whyget title="Opportunity to test and iterate your product in actual use case scenario" />
+						</div>
+					</div>
+					<div class="blog-button mt-4">
+						<a  target="_blank" href="https://forms.zohopublic.com/keralastartupmission/form/KERAProjectPartnersInstitutions/formperma/2vl8wVYyxy4ZsUWBWdzqT6DpSudHRAlhRmEOPHyspDA" target="_blank">Partner With Us<i class="bi bi-arrow-right-short"></i></a>
+					</div>
+				</div>
+				<div class="meta-blog mt-2">
+					<span>For partners & Institutions</span>
+				</div>
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+</div>
+
+<div class="contact-info-area home-five hidden">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-4 col-md-6">
+				<div class="contact-info-title">
+					<h4>Inviting </h4>
+					<h1>Problem Statements </h1>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 items-center  flex flex-col border-r border-l">
+				<div class="echofy-button style-four">
+					<a href="https://zfrmz.com/bwQleDi6Vwxq8RzDwhOA" target="_blank">Apply Now<i class="fas fa-angle-double-right"></i></a>
+				</div>
+				<p class="pt-2 text-white">
+					From Farmers
+				</p>
+			</div>
+			<div class="col-lg-4 col-md-6 items-center  flex flex-col">
+				<div class="echofy-button style-four">
+					<a href="https://zfrmz.com/I7NqhWGRAhE2I3NRBRED" target="_blank">Apply Now<i class="fas fa-angle-double-right"></i></a>
+				</div>
+				<p class="pt-2 text-white">
+					From Agriculture and Allied Department officials
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="skill-area">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-8">
+				<div class="section-title left">
+					<!-- <h4><img src="assets/images/home1/section-shape.png" alt="">Our Skills </h4> -->
+					<h1>Inviting</h1>
+					<h1>Problem Statements</h1>
+					<p class="section-desc text-gray-500">
+						We invite farmers and agriculture-allied department officials to share key problem statements through the AgriNext programme—help us identify real-world challenges and co-create solutions that transform Kerala’s agri-value chains.
+					</p>
+				</div>
+				<div class="skills-item">
+					<a href="https://zfrmz.com/bwQleDi6Vwxq8RzDwhOA" target="_blank" class="skills-item-content">
+						<div class="skills-item-icon">
+							<i class="bi bi-arrow-right-short"></i>
+						</div>
+						<div  class="skills-item-title">
+							<h4>From Farmers</h4>
+						</div>
+					</a>
+				</div>			
+				<div class="skills-item">
+					<a  href="https://zfrmz.com/I7NqhWGRAhE2I3NRBRED" target="_blank" class="skills-item-content">
+						<div class="skills-item-icon">
+							<i class="bi bi-arrow-right-short"></i>
+						</div>
+						<div class="skills-item-title">
+							<h4>From Officials</h4>
+						</div>
+					</a>
+				</div>
+				
+     		</div>
+     		<div class="col-lg-4">
+     			<div class="skills-thumb">
+     				<img src="/img/skill-thumb.png" alt="">
+     				<!-- <div class="skills-shape">
+     					<img src="assets/images/home1/skill-shape-1.png" alt="">
+     				</div>     				 -->
+     				<div class="skills-shape-2">
+     					<img src="assets/images/home1/skill-shape-2.png" alt="">
+     				</div>
+     			</div>
+     		</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class=" container my-24">
+	
+	<div class="">
+		<div class=" text-center">
+			<h1 class="pb-10 text-3xl font-bold">Request for Bids</h1>
+		</div>
+	</div>
+	<div class=" flex flex-col item-center justify-center">
+		<div class="">
+			<a href="https://drive.google.com/file/d/1oCZBdWMELS8B5TqhQP93TSOrLKvncY2s/view?usp=sharing" target="_blank" class="group flex items-center justify-between gap-6 md:px-10 px-3 py-6 transition border-b group hover:shadow-2xl  duration-700 overflow-hidden">
+				<div class="flex-1">
+					<h2 class="text-lg font-semibold text-slate-900 group-hover:text-[#03543f] ">
+						RFB for inviting Event Management Agencies for Agrinext Summit 2026
+					</h2>
+				</div>
+
+				<div class="flex items-center gap-2 text-green-700 font-medium">
+					View Details
+					<span class="text-lg leading-none">→</span>
+				</div>
+			</a>
+		</div>
+
+		<div class="">
+			<a href="https://drive.google.com/file/d/17tpUYsX61awi6fqC5I7tcHc_UiQqcENc/view?usp=sharing" target="_blank" class="group flex items-center justify-between gap-6 md:px-10 px-3 py-6 transition border-b group hover:shadow-2xl  duration-700 overflow-hidden">
+				<div class="flex-1">
+					<h2 class="text-lg font-semibold text-slate-900 group-hover:text-[#03543f] ">
+						RFB for inviting Catering Service Providers for Agrinext Summit 2026
+					</h2>
+				</div>
+
+				<div class="flex items-center gap-2 text-green-700 font-medium">
+					View Details
+					<span class="text-lg leading-none">→</span>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--==================================================-->
+<!-- Strat Echofy Skill Area -->
+<!--==================================================-->
+
+
+
+<!--==================================================-->
+<!-- Strat Echofy Counter Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Strat Echofy Process Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+<!-- Strat Echofy Project Area -->
+<!--==================================================-->
+
+
+
+<!--==================================================-->
+<!-- Strat Echofy Process Area Two-->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- End Echofy Process Area Two-->
+<!--==================================================-->
+
+
+
+
+
+
+
+
+<!--==================================================-->
+<!-- End Echofy search-popup Area-->
+<!--==================================================-->
+<div class="search-popup">
+	<button class="close-search style-two"><span class="flaticon-multiply"><i class="far fa-times-circle"></i></span></button>
+	<button class="close-search"><i class="bi bi-arrow-up"></i></button>
+	<form method="post" action="#">
+		<div class="form-group">
+			<input type="search" name="search-field" value="" placeholder="Search Here" required="">
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</div>
+	</form>
+</div>
+<!--==================================================-->
+<!-- End Echofy search-popup Area-->
+<!--==================================================-->
+
+
+
+<!--==================================================-->
+<!-- Start scrollup section Section -->
+<!--==================================================-->
+<div class="prgoress_indicator active-progress hidden">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 0;"></path>
+        </svg>
+ </div>
+<!--==================================================-->
+<!-- End scrollup section Section -->
+<!--==================================================-->
+
+</Layout>
+
+
+<script is:inline>
+  document.querySelectorAll("a.page-scroll").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = anchor.getAttribute("href");
+      const targetId = href.replace(/^\/?#/, "");
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        e.preventDefault();
+
+        targetElement.scrollIntoView({ behavior: "smooth" });
+
+        history.replaceState(null, null, window.location.pathname);
+      }
+    });
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetId = hash.replace("#", "");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        setTimeout(() => {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+          history.replaceState(null, null, window.location.pathname);
+        }, 100);
+      }
+    }
+  });
+</script>
